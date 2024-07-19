@@ -7,16 +7,9 @@ import React from "react";
 import MobileNav from "./MobileNav";
 import NavItems from "./NavItems";
 
-const handleSend = async () => {
-  const res = await fetch("/api/webhook/test", { method: "POST" });
-  const data = await res.json();
-  console.log("fffffffffffff", data);
-};
-
 const Header = () => {
   return (
     <header className="w-full border-b">
-      <button onClick={handleSend}>cliiiiiiiiiiiiiiiiiiiik</button>
       <div className="wrapper flex items-center justify-between">
         <Link href="/" className="w-36">
           <Image

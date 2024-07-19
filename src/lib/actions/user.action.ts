@@ -12,6 +12,8 @@ import { connectToDb } from "../database";
 import Order from "../database/models/order.model";
 
 export async function createUser(user: CreateUserParams) {
+  console.log("userrrrrrrrrrrrrrrr", user);
+
   try {
     await connectToDb();
 
