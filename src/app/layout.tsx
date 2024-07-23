@@ -4,7 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 
 import MuiTheme from "../providers/MuiTheme";
-import MuiCacheProvider from "../providers/MuiCacheProvider";
+import ReactQueryClient from "@/providers/ReactQueryClient";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,9 +26,9 @@ export default function RootLayout({
         )}
       >
         <ClerkProvider>
-          <MuiCacheProvider>
+          <ReactQueryClient>
             <MuiTheme>{children}</MuiTheme>
-          </MuiCacheProvider>
+          </ReactQueryClient>
         </ClerkProvider>
       </body>
     </html>
