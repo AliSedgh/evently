@@ -38,6 +38,7 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
       ],
       metadata: {
         eventId: order.eventId,
+        buyerId: order.buyerId,
       },
       mode: "payment",
       success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/profile`,
@@ -46,8 +47,6 @@ export const checkoutOrder = async (order: CheckoutOrderParams) => {
 
     redirect(session.url!);
   } catch (error) {
-    console.log("errrrrrrrrr", error);
-
     throw error;
   }
 };
