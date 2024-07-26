@@ -41,7 +41,10 @@ type EventFormProps = {
   eventId?: string;
 };
 
+
 const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
+
+
   const [files, setFiles] = useState<File[]>([]);
   const router = useRouter();
 
@@ -197,7 +200,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <div className="flex-center bg-gray-100 rounded-full w-full">
+                  <div className="flex-center bg-[#f6f6f6] rounded-full w-full">
                     <TextField
                       className="w-full"
                       label="Event location"
